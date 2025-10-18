@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects | Muhammad Talha Afzaal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#7c3aed;
+      --glass:rgba(255,255,255,0.03);
+      --glass-2:rgba(255,255,255,0.04);
+      --radius:16px;
+      --ff-sans:'Plus Jakarta Sans',Inter,system-ui;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071028 0%, #071426 60%);color:#e6eef8;font-family:var(--ff-sans);padding:32px;}
+    .container{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a.active{color:var(--accent)}
+    .card{background:var(--glass-2);padding:24px;border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,0.4);margin-bottom:20px}
+    .project{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+    .project img{width:100px;height:100px;border-radius:10px;object-fit:cover}
+    .chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);font-weight:600;font-size:13px;color:#fff;text-decoration:none}
+    .btn{padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;color:white;font-weight:700;text-decoration:none}
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:40px;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PT</div>
+        <div>
+          <h1 style="margin:0;font-size:18px">Muhammad Talha Afzaal</h1>
+          <div style="color:var(--muted);font-size:13px">Web & Mobile Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>🚀 Featured Projects</h2>
+        <p style="color:var(--muted)">Here are some of my recent works:</p>
+
+        <div class="project">
+          <img src="assets/project1.jpg" alt="Project 1">
+          <div>
+            <h3>Prestige Cars</h3>
+            <p>Car showroom website with search and filtering, built with React.</p>
+            <a class="chip" href="https://prestigeautomotive.netlify.app/" target="_blank">Live Demo</a>
+            <a class="chip" href="https://github.com/talha732278/PC" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="assets/project2.jpg" alt="Project 2">
+          <div>
+            <h3>UBC Company Portfolio</h3>
+            <p>A portfolio website for a construction company </p>
+            <a class="chip" href="https://gleaming-wisp-0b42d9.netlify.app/" target="_blank">Live Demo</a>
+            <a class="chip" href="https://github.com/talha732278/UBC-" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="assets/project3.jpg" alt="Project 3">
+          <div>
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio built using HTML, CSS, and JavaScript with animations.</p>
+            <a class="chip" href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+            <a class="chip" href="https://github.com/yourusername/portfolio" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>📬 Contact</h3>
+        <p>Email: <strong style="color:var(--accent)">talhaafzaal2004@gmail.com</strong></p>
+        <a href="index.html#contact" class="btn">Go to Contact Form</a>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Muhammad Talha Afzaal</div>
+      <div>Built with ❤️ — HTML / CSS / JS</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
