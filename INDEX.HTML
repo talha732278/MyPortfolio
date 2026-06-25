@@ -9,21 +9,21 @@
 
   <style>
     :root {
-      --bg: #0f1724;
-      --card: #0b1220;
-      --muted: #98a0b3;
-      --accent: #7c3aed;
-      --accent-light: #9b5bff;
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.05);
+      --bg: #0a0a0a;
+      --card: #0d0d0d;
+      --muted: #6b8f6b;
+      --accent: #39ff14;
+      --accent-light: #7fff4e;
+      --glass: rgba(57,255,20,0.03);
+      --glass-2: rgba(57,255,20,0.06);
       --radius: 16px;
       --ff-sans: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: linear-gradient(180deg, #071028 0%, #071426 60%);
-      color: #e6eef8;
+      background: linear-gradient(180deg, #000000 0%, #040a04 60%);
+      color: #e2f5e2;
       font-family: var(--ff-sans);
       line-height: 1.5;
       padding: 32px;
@@ -37,10 +37,10 @@
     .logo {
       width: 54px; height: 54px;
       border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #06b6d4);
+      background: linear-gradient(135deg, var(--accent), #00e07a);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800; color: white; font-size: 20px;
-      box-shadow: 0 8px 30px rgba(124,58,237,0.2);
+      font-weight: 800; color: #000; font-size: 20px;
+      box-shadow: 0 8px 30px rgba(57,255,20,0.25);
     }
 
     /* Navigation with underline animation */
@@ -84,19 +84,19 @@
     .btn {
       padding: 10px 18px;
       border-radius: 10px;
-      background: linear-gradient(90deg, var(--accent), #06b6d4);
+      background: linear-gradient(90deg, var(--accent), #00e07a);
       border: none;
-      color: white;
+      color: #000;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.25s ease;
-      box-shadow: 0 10px 25px rgba(124,58,237,0.2);
+      box-shadow: 0 10px 25px rgba(57,255,20,0.25);
     }
     .btn:hover { transform: translateY(-2px) scale(1.02); }
 
     .btn-outline {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(57,255,20,0.12);
       color: var(--muted);
       transition: all 0.25s ease;
     }
@@ -112,7 +112,7 @@
       height: 380px;
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 10px 40px rgba(124,58,237,0.15);
+      box-shadow: 0 10px 40px rgba(57,255,20,0.2);
       animation: floaty 6s ease-in-out infinite;
     }
     .profile img {
@@ -150,11 +150,60 @@
       color: var(--muted); font-size: 14px;
     }
 
+    /* Languages Section */
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .lang-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 12px;
+      border-radius: 14px;
+      background: rgba(57,255,20,0.04);
+      border: 1px solid rgba(57,255,20,0.1);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .lang-card:hover {
+      background: rgba(57,255,20,0.10);
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(57,255,20,0.2);
+    }
+    .lang-card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 6px rgba(57,255,20,0.15));
+      transition: filter 0.3s ease;
+    }
+    .lang-card:hover img {
+      filter: drop-shadow(0 0 10px rgba(57,255,20,0.4));
+    }
+    .lang-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.3s ease;
+    }
+    .lang-card:hover .lang-name {
+      color: var(--accent);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
       nav { display: none; }
       .profile { height: 300px; }
+      .languages-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .languages-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -192,6 +241,37 @@
 
         <div class="profile">
           <img src="assets/Talha.jpeg" alt="Muhammad Talha Afzaal">
+        </div>
+      </section>
+
+      <!-- LANGUAGES I MASTER -->
+      <section id="languages" class="card">
+        <h3>🚀 Languages I Master</h3>
+        <div class="languages-grid">
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+            <span class="lang-name">HTML</span>
+          </div>
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+            <span class="lang-name">CSS</span>
+          </div>
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <span class="lang-name">JavaScript</span>
+          </div>
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter">
+            <span class="lang-name">Flutter</span>
+          </div>
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+            <span class="lang-name">Python</span>
+          </div>
+          <div class="lang-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+            <span class="lang-name">React</span>
+          </div>
         </div>
       </section>
 
